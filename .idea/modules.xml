@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Hello World/Hello World.iml" filepath="$PROJECT_DIR$/Hello World/Hello World.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/LF01.iml" filepath="$PROJECT_DIR$/.idea/LF01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Hello World/Rechnen1/Rechnen1.iml" filepath="$PROJECT_DIR$/Hello World/Rechnen1/Rechnen1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/einstiegJava/einstiegJava.iml" filepath="$PROJECT_DIR$/einstiegJava/einstiegJava.iml" />
     </modules>
   </component>
 </project>
