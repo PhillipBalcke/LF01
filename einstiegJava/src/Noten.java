@@ -1,10 +1,19 @@
-public class Noten {
-    public static void main(String[] args) {
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-        double prozentWert;
+public class Noten {
+    public static void main(String[] args) throws IOException{
+
+        System.out.println("Geben sie Ihren Prozentwert ein: ");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String text = br.readLine();
+        double prozentWert = Double.parseDouble(text.replace(',', '.'));
+
+
         int note;
 
-        prozentWert = 58.5;
+
 
         if (prozentWert >= 85) {
             note = 1;
@@ -22,7 +31,6 @@ public class Noten {
 
         System.out.println("prozentWert = " + prozentWert);
         System.out.println("note = " + note);
-
 
     }
 
