@@ -8,13 +8,13 @@ public class Summe {
         System.out.println("Geben sie Ihre Summe ein:");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String text = br.readLine();
-        double summe = Double.parseDouble(text.replace(',', '.'));
+        double grenze = Double.parseDouble(text.replace(',', '.'));
 
 
-        summe = 0;
+        double summe = 0;
         double summand = 1;
 
-        while (summand <=10) {
+        while (summand <=grenze) {
 
 
             summe = summe + summand;
