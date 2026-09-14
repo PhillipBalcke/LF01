@@ -3,7 +3,7 @@ public class Dreiecksungleichung {
     public static void main(String[] args) {
 
         double a = 6;
-        double b = 3;
+        double b = 4;
         double c = 5;
 
 
