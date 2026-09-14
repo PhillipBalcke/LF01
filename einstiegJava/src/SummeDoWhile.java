@@ -12,13 +12,13 @@ public class SummeDoWhile {
             double grenze = Double.parseDouble(text.replace(',', '.'));
 
 
-          int i = 0;
+          int summe = 0;
 
           do {
-              System.out.println(i);
+              System.out.println(summe);
 
-              i = i + 1;
-          } while (i >= grenze);
+              summe = summe + 1;
+          } while (summe >= grenze);
 
           }
 
