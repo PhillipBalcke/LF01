@@ -8,15 +8,15 @@ public class ZaelerSchleife {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Geben sie Ihren Grenzwert ein");
+        System.out.println("Geben sie Ihren Grenzwert ein:");
         String eingabeText = br.readLine();
         int grenze = Integer.parseInt(eingabeText);
 
-        int summe;
+        int summe = 0;
 
-        for ( summe = 0; int summand = 1; (summand <= grenze  summe = summe + summand; summand = summand +1;
-
-        System.out.println(summe);
-
+        for ( int summand = 1; summand <= grenze; summand = summand +1) {
+            summe = summe + summand;
+        }
+        System.out.println("Ihre summe betreagt:" + summe);
     }
 }
