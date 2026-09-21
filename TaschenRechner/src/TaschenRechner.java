@@ -9,20 +9,15 @@ public class TaschenRechner {
     public static void main(String[] args) throws IOException {
 
 
-        System.out.println("Bitte die Rechenoperation wählen: ");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String text = br.readLine();
 
         System.out.println(" Geben sie Ihre erste Zahl ein: ");
-        text = br.readLine();
+        String text = br.readLine();
         double zahl1 = Double.parseDouble(text.replace(',', '.'));
 
         System.out.println(" Geben sie Ihre zweite Zahl ein: ");
         text = br.readLine();
         double zahl2 = Double.parseDouble(text.replace(',', '.'));
-
-
-
 
 
         double summe = zahl1 + zahl2;
@@ -31,11 +26,27 @@ public class TaschenRechner {
         double quotient = zahl1 / zahl2;
 
         System.out.println(" Zahl X: " + zahl1);
-        System.out.println(" Zahl Y: " + zahl2);
-        System.out.println("Die Summe beträgt " + summe);
-        System.out.println(" Das Produkt beträgt " + produkt);
-        System.out.println(" Doe differenz beträgt " + differenz);
-        System.out.println("Der Quotient beträt " + quotient);
+        System.out.println("Zahl Y: " + zahl2);
+        //System.out.println("Die Summe beträgt " + summe);
+        //System.out.println(" Das Produkt beträgt " + produkt);
+        //System.out.println(" Doe differenz beträgt " + differenz);
+        //System.out.println("Der Quotient beträt " + quotient);
+
+        System.out.println("Geben sie Ihre Rechenoperation ein");
+        String operation = br.readLine();
+
+        if (operation.equals("+")) {
+            System.out.println("Summe " + zahl1 + zahl2);
+        }
+            else if (operation.equals("*")) {
+            System.out.println("Produkt " + zahl1 * zahl2);
+        }
+            else if (operation.equals("-")) {
+            System.out.println("differenz " + (zahl1 - zahl2));
+        }
+            else if (operation.equals("/")) {
+            System.out.println("Quotient " + zahl1 / zahl2);
+        }
 
 
 
