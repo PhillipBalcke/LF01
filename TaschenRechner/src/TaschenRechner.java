@@ -27,15 +27,12 @@ public class TaschenRechner {
 
         System.out.println(" Zahl X: " + zahl1);
         System.out.println("Zahl Y: " + zahl2);
-        //System.out.println("Die Summe beträgt " + summe);
-        //System.out.println(" Das Produkt beträgt " + produkt);
-        //System.out.println(" Doe differenz beträgt " + differenz);
-        //System.out.println("Der Quotient beträt " + quotient);
 
+        /*
         System.out.println("Geben sie Ihre Rechenoperation ein");
         String operation = br.readLine();
 
-        if (operation.equals("+")) {
+        if  operation.equals("+")) {
             System.out.println("Summe " + zahl1 + zahl2);
         }
             else if (operation.equals("*")) {
@@ -46,10 +43,30 @@ public class TaschenRechner {
         }
             else if (operation.equals("/")) {
             System.out.println("Quotient " + zahl1 / zahl2);
+        }  */
+
+        System.out.println("Geben Sie Ihre Rechenoperation ein");
+        String operation = br.readLine();
+
+        switch (operation) {
+            case "+":
+                System.out.println("Summe " + (zahl1 + zahl2));
+                break;
+            case "*":
+                System.out.println("Produkt " + (zahl1 * zahl2));
+                break;
+            case "-":
+                System.out.println("differenz " + (zahl1 - zahl2));
+                break;
+            case "/":
+                System.out.println("Quotient " + (zahl1 / zahl2));
+                break;
+            default:
+                System.out.println("Ungültige Operation!");
+                break;
         }
 
-
-
+    }
 
     }
 
@@ -57,5 +74,5 @@ public class TaschenRechner {
 
 
 
-}
+
 
