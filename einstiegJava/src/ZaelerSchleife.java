@@ -9,7 +9,7 @@ public class ZaelerSchleife {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Geben sie Ihren Grenzwert ein:");
-        String eingabeText = br.readLine();
+        String eingabeText = br.readLine().trim();
         int grenze = Integer.parseInt(eingabeText);
 
         int summe = 0;
@@ -17,6 +17,7 @@ public class ZaelerSchleife {
         for ( int summand = 1; summand <= grenze; summand = summand +1) {
             summe = summe + summand;
         }
-        System.out.println("Ihre summe betreagt:" + summe);
+        System.out.println("Ihre summe betreagt: " + summe);
+
     }
 }
