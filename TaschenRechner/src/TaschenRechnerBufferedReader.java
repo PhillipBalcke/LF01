@@ -119,11 +119,10 @@ public class TaschenRechnerBufferedReader {
         }  */
 
 
-            System.out.println ("Wollen Sie eine weitere3 Rechnung durchführen, dann geben Sie [j] ein.");
+            System.out.println ("Wollen Sie eine weitere Rechnung durchführen, dann geben Sie [j] ein.");
             String wiederholen = br.readLine();
             if(wiederholen.equals("j") || wiederholen.equals("J")) {
-                weiter = true;
-            }
+                weiter = true;}
         }while (weiter);
 
     }
