@@ -7,7 +7,7 @@ public class TaschenRechnerBufferedReader {
 
     public static void main(String[] args) throws IOException {
 
-        boolean weiter = true;
+        boolean weiter = false;
 
         do {
             //Menü
@@ -19,55 +19,62 @@ public class TaschenRechnerBufferedReader {
             System.out.println("[p] für Potenzieren");
             System.out.println("[w] für Wurzelziehen");
             System.out.println("Deine Auswhal: ");
-
-            System.out.println(" Bitte die Basis eingeben: ");
-            System.out.println(" Bitte den Exponenten eingeben: ");
-            System.out.println ("Wollen Sie eine weiter Rechnung durchführen, dann geben Sie [j] ein.");
             String operation = br.readLine();
+
             // Berechnungen
             switch (operation) {
                 case "+":
+                    System.out.println("Bitte den ersten Summand eingeben: ");
                     String text = br.readLine();
                     double zahl1 = Double.parseDouble(text.replace(',', '.'));
+                    System.out.println("Bitte den zweiten Summand eingeben: ");
                     text = br.readLine();
                     double zahl2 = Double.parseDouble(text.replace(',', '.'));
                     System.out.println("Summe " + (zahl1 + zahl2));
                     break;
                 case "*":
+                    System.out.println(" Bitte den ersten Faktor eingben: ");
                     text = br.readLine();
                     zahl1 = Double.parseDouble(text.replace(',', '.'));
+                    System.out.println("Bitte den zweiten Faktor eingeben:");
                     text = br.readLine();
                     zahl2 = Double.parseDouble(text.replace(',', '.'));
                     System.out.println("Produkt " + (zahl1 * zahl2));
                     break;
                 case "-":
+                    System.out.println("Bitte den Minuend eingeben: ");
                     text = br.readLine();
                     zahl1 = Double.parseDouble(text.replace(',', '.'));
+                    System.out.println("Bitte den Subtrahend eingeben: ");
                     text = br.readLine();
                     zahl2 = Double.parseDouble(text.replace(',', '.'));
                     System.out.println("differenz " + (zahl1 - zahl2));
                     break;
                 case "/":
+                    System.out.println("Bitte den Dividenden eingeben: ");
                     text = br.readLine();
                     zahl1 = Double.parseDouble(text.replace(',', '.'));
+                    System.out.println("Bitte den Divisor eingeben: ");
                     text = br.readLine();
                     zahl2 = Double.parseDouble(text.replace(',', '.'));
                     System.out.println("Quotient " + (zahl1 / zahl2));
                     break;
 
                 case "p":
+                    System.out.println(" Bitte die Basis eingeben: ");
                     text = br.readLine();
                     zahl1 = Double.parseDouble(text.replace(',', '.'));
+                    System.out.println(" Bitte den Exponenten eingeben: ");
                     text = br.readLine();
                     zahl2 = Double.parseDouble(text.replace(',', '.'));
-                    System.out.println(Math.pow(zahl1, + zahl2));
+                    System.out.println(Math.pow(zahl1, zahl2));
                     break;
 
                 case "w":
+                    System.out.println(" Bitte den Wurzelwert eingeben: ");
                     text = br.readLine();
                     zahl1 = Double.parseDouble(text.replace(',', '.'));
                     text = br.readLine();
-                    zahl2 = Double.parseDouble(text.replace(',', '.'));
                     System.out.println(Math.sqrt(zahl1));
                     break;
 
@@ -76,8 +83,6 @@ public class TaschenRechnerBufferedReader {
                     break;
 
             }
-
-
 
 
             /*String text = br.readLine();
@@ -113,7 +118,13 @@ public class TaschenRechnerBufferedReader {
             System.out.println("Quotient " + zahl1 / zahl2);
         }  */
 
-        }while (true);
+
+            System.out.println ("Wollen Sie eine weitere3 Rechnung durchführen, dann geben Sie [j] ein.");
+            String wiederholen = br.readLine();
+            if(wiederholen.equals("j") || wiederholen.equals("J")) {
+                weiter = true;
+            }
+        }while (weiter);
 
     }
 }
