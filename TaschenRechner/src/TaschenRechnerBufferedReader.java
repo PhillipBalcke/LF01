@@ -54,10 +54,28 @@ public class TaschenRechnerBufferedReader {
                     zahl2 = Double.parseDouble(text.replace(',', '.'));
                     System.out.println("Quotient " + (zahl1 / zahl2));
                     break;
-                default:
+
+                case "p":
+                    text = br.readLine();
+                    zahl1 = Double.parseDouble(text.replace(',', '.'));
+                    text = br.readLine();
+                    zahl2 = Double.parseDouble(text.replace(',', '.'));
+                    System.out.println("Quotient " + (zahl1 / zahl2));
+                    break;
+
+                case "w":
+                    text = br.readLine();
+                    zahl1 = Double.parseDouble(text.replace(',', '.'));
+                    text = br.readLine();
+                    zahl2 = Double.parseDouble(text.replace(',', '.'));
+                    System.out.println("Quotient " + (zahl1 / zahl2));
+                    break;
+
+                    default:
                     System.out.println("Ungültige Operation!");
                     break;
 
+            }
 
 
 
@@ -95,7 +113,7 @@ public class TaschenRechnerBufferedReader {
             System.out.println("Quotient " + zahl1 / zahl2);
         }  */
 
-            }
+        }while (true);
 
     }
 }
