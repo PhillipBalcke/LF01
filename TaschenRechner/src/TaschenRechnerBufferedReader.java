@@ -78,7 +78,7 @@ public class TaschenRechnerBufferedReader {
                     System.out.println(Math.sqrt(zahl1));
                     break;
 
-                    default:
+                default:
                     System.out.println("Ungültige Operation!");
                     break;
 
@@ -119,11 +119,20 @@ public class TaschenRechnerBufferedReader {
         }  */
 
 
-            System.out.println ("Wollen Sie eine weitere Rechnung durchführen, dann geben Sie [j] ein.");
+            System.out.println("Wollen Sie eine weitere Rechnung durchführen, dann geben Sie [j] ein.");
             String wiederholen = br.readLine();
-            if(wiederholen.equals("j") || wiederholen.equals("J")) {
-                weiter = true;}
-        }while (weiter);
+            if (wiederholen.equals("j") || wiederholen.equals("J")) {
+                weiter = true;
+            }
+
+        } while (weiter);
 
     }
+
+        private static double addieren(double zahl1, double zahl2 ) {
+        double ergebniss = zahl1 + zahl2;
+        return ergebniss;
+        }
+
+
 }
