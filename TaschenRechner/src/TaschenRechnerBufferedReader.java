@@ -22,7 +22,7 @@ public class TaschenRechnerBufferedReader {
 
             System.out.println(" Bitte die Basis eingeben: ");
             System.out.println(" Bitte den Exponenten eingeben: ");
-            System.out.println("Wollen Sie eine weiter Rechnung durchführen, dann geben Sie [j] ein.");
+            System.out.println ("Wollen Sie eine weiter Rechnung durchführen, dann geben Sie [j] ein.");
             String operation = br.readLine();
             // Berechnungen
             switch (operation) {
@@ -60,7 +60,7 @@ public class TaschenRechnerBufferedReader {
                     zahl1 = Double.parseDouble(text.replace(',', '.'));
                     text = br.readLine();
                     zahl2 = Double.parseDouble(text.replace(',', '.'));
-                    System.out.println("Quotient " + (zahl1 / zahl2));
+                    System.out.println(Math.pow(zahl1, + zahl2));
                     break;
 
                 case "w":
@@ -68,7 +68,7 @@ public class TaschenRechnerBufferedReader {
                     zahl1 = Double.parseDouble(text.replace(',', '.'));
                     text = br.readLine();
                     zahl2 = Double.parseDouble(text.replace(',', '.'));
-                    System.out.println("Quotient " + (zahl1 / zahl2));
+                    System.out.println(Math.sqrt(zahl1));
                     break;
 
                     default:
