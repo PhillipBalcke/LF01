@@ -21,7 +21,7 @@ public class BMI {
 
 
         //Berechnung
-        double BMI = gewicht / (Koerpergroesse * Koerpergroesse);
+        double BMI = gewicht / ((Koerpergroesse / 100.0) * (Koerpergroesse / 100.0));
         System.out.println("der beitrag von BMI ist: " + BMI);
 
         switch (geschlecht) {
