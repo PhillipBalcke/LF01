@@ -1,6 +1,8 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.math.BigDecimal;
+
 public class TaschenRechnerBufferedReader {
 
     static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -9,73 +11,34 @@ public class TaschenRechnerBufferedReader {
 
         boolean weiter = false;
 
+        double ergebniss =0;
+
         do {
             //Menü
-            System.out.println("Folgende Rechenoperationen stehen zur Auswahl");
-            System.out.println("[+] für Addition");
-            System.out.println("[-] für Subtraktion");
-            System.out.println("[*] für Multiplikation");
-            System.out.println("[/] für Division");
-            System.out.println("[p] für Potenzieren");
-            System.out.println("[w] für Wurzelziehen");
-            System.out.println("Deine Auswhal: ");
+            zeigeMenue();
             String operation = br.readLine();
 
             // Berechnungen
             switch (operation) {
                 case "+":
-                    System.out.println("Bitte den ersten Summand eingeben: ");
-                    String text = br.readLine();
-                    double zahl1 = Double.parseDouble(text.replace(',', '.'));
-                    System.out.println("Bitte den zweiten Summand eingeben: ");
-                    text = br.readLine();
-                    double zahl2 = Double.parseDouble(text.replace(',', '.'));
-                    System.out.println("Summe " + (zahl1 + zahl2));
+                    addieren();
                     break;
                 case "*":
-                    System.out.println(" Bitte den ersten Faktor eingben: ");
-                    text = br.readLine();
-                    zahl1 = Double.parseDouble(text.replace(',', '.'));
-                    System.out.println("Bitte den zweiten Faktor eingeben:");
-                    text = br.readLine();
-                    zahl2 = Double.parseDouble(text.replace(',', '.'));
-                    System.out.println("Produkt " + (zahl1 * zahl2));
+                    Multiplizieren();
                     break;
                 case "-":
-                    System.out.println("Bitte den Minuend eingeben: ");
-                    text = br.readLine();
-                    zahl1 = Double.parseDouble(text.replace(',', '.'));
-                    System.out.println("Bitte den Subtrahend eingeben: ");
-                    text = br.readLine();
-                    zahl2 = Double.parseDouble(text.replace(',', '.'));
-                    System.out.println("differenz " + (zahl1 - zahl2));
+                    subtrahieren();
                     break;
                 case "/":
-                    System.out.println("Bitte den Dividenden eingeben: ");
-                    text = br.readLine();
-                    zahl1 = Double.parseDouble(text.replace(',', '.'));
-                    System.out.println("Bitte den Divisor eingeben: ");
-                    text = br.readLine();
-                    zahl2 = Double.parseDouble(text.replace(',', '.'));
-                    System.out.println("Quotient " + (zahl1 / zahl2));
+                    Dividieren();
                     break;
 
                 case "p":
-                    System.out.println(" Bitte die Basis eingeben: ");
-                    text = br.readLine();
-                    zahl1 = Double.parseDouble(text.replace(',', '.'));
-                    System.out.println(" Bitte den Exponenten eingeben: ");
-                    text = br.readLine();
-                    zahl2 = Double.parseDouble(text.replace(',', '.'));
-                    System.out.println(Math.pow(zahl1, zahl2));
+                    Potenzen();
                     break;
 
                 case "w":
-                    System.out.println(" Bitte den Wurzelwert eingeben: ");
-                    text = br.readLine();
-                    zahl1 = Double.parseDouble(text.replace(',', '.'));
-                    text = br.readLine();
-                    System.out.println(Math.sqrt(zahl1));
+                    Wurzel();
                     break;
 
                 default:
@@ -122,17 +85,98 @@ public class TaschenRechnerBufferedReader {
             System.out.println("Wollen Sie eine weitere Rechnung durchführen, dann geben Sie [j] ein.");
             String wiederholen = br.readLine();
             if (wiederholen.equals("j") || wiederholen.equals("J")) {
+
                 weiter = true;
             }
+
 
         } while (weiter);
 
     }
 
-        private static double addieren(double zahl1, double zahl2 ) {
-        double ergebniss = zahl1 + zahl2;
-        return ergebniss;
-        }
 
+
+    private static void zeigeMenue() {
+        System.out.println("Folgende Rechenoperationen stehen zur Auswahl");
+        System.out.println("[+] für Addition");
+        System.out.println("[-] für Subtraktion");
+        System.out.println("[*] für Multiplikation");
+        System.out.println("[/] für Division");
+        System.out.println("[p] für Potenzieren");
+        System.out.println("[w] für Wurzelziehen");
+        System.out.println("Deine Auswhal: ");
+
+    }
+
+
+    private static void addieren() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Bitte den ersten Summand eingeben: ");
+        String text = br.readLine();
+        double zahl1 = Double.parseDouble(text.replace(',', '.'));
+        System.out.println("Bitte den zweiten Summand eingeben: ");
+        text = br.readLine();
+        double zahl2 = Double.parseDouble(text.replace(',', '.'));
+        System.out.println("Summe " + (zahl1 + zahl2));
+    }
+
+
+    private static void Multiplizieren() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println(" Bitte den ersten Faktor eingben: ");
+        String text = br.readLine();
+        Double zahl1 = Double.parseDouble(text.replace(',', '.'));
+        System.out.println("Bitte den zweiten Faktor eingeben:");
+        text = br.readLine();
+        Double zahl2 = Double.parseDouble(text.replace(',', '.'));
+        System.out.println("Produkt " + (zahl1 * zahl2));
+    }
+
+    private static void subtrahieren() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Bitte den Minuend eingeben: ");
+        String text = br.readLine();
+        Double zahl1 = Double.parseDouble(text.replace(',', '.'));
+        System.out.println("Bitte den Subtrahend eingeben: ");
+        text = br.readLine();
+        Double zahl2 = Double.parseDouble(text.replace(',', '.'));
+        System.out.println("differenz " + (zahl1 - zahl2));
+    }
+
+
+    private static void Dividieren() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Bitte den Dividenden eingeben: ");
+        String text = br.readLine();
+        Double zahl1 = Double.parseDouble(text.replace(',', '.'));
+        System.out.println("Bitte den Divisor eingeben: ");
+        text = br.readLine();
+        Double zahl2 = Double.parseDouble(text.replace(',', '.'));
+        System.out.println("Quotient " + (zahl1 / zahl2));
+    }
+
+    private static void Potenzen() throws IOException {
+        System.out.println(" Bitte die Basis eingeben: ");
+        String text = br.readLine();
+        Double zahl1 = Double.parseDouble(text.replace(',', '.'));
+        System.out.println(" Bitte den Exponenten eingeben: ");
+        text = br.readLine();
+        Double zahl2 = Double.parseDouble(text.replace(',', '.'));
+        System.out.println(Math.pow(zahl1, zahl2));
+    }
+
+    private static void Wurzel() throws IOException {
+        System.out.println(" Bitte den Wurzelwert eingeben: ");
+        String text = br.readLine();
+        Double zahl1 = Double.parseDouble(text.replace(',', '.'));
+        text = br.readLine();
+        System.out.println(Math.sqrt(zahl1));
+
+    }
 
 }
+
+
+
+
+
