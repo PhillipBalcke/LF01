@@ -117,7 +117,7 @@ public class TaschenRechnerBufferedReader {
         System.out.println("Bitte den zweiten Summand eingeben: ");
         text = br.readLine();
         double zahl2 = Double.parseDouble(text.replace(',', '.'));
-        System.out.println("Summe " + (zahl1 + zahl2));
+        System.out.println("Summe = " + (zahl1 + zahl2));
     }
 
 
@@ -129,7 +129,7 @@ public class TaschenRechnerBufferedReader {
         System.out.println("Bitte den zweiten Faktor eingeben:");
         text = br.readLine();
         Double zahl2 = Double.parseDouble(text.replace(',', '.'));
-        System.out.println("Produkt " + (zahl1 * zahl2));
+        System.out.println("Produkt = " + (zahl1 * zahl2));
     }
 
     private static void subtrahieren() throws IOException {
@@ -140,7 +140,7 @@ public class TaschenRechnerBufferedReader {
         System.out.println("Bitte den Subtrahend eingeben: ");
         text = br.readLine();
         Double zahl2 = Double.parseDouble(text.replace(',', '.'));
-        System.out.println("differenz " + (zahl1 - zahl2));
+        System.out.println("differenz = " + (zahl1 - zahl2));
     }
 
 
@@ -152,7 +152,7 @@ public class TaschenRechnerBufferedReader {
         System.out.println("Bitte den Divisor eingeben: ");
         text = br.readLine();
         Double zahl2 = Double.parseDouble(text.replace(',', '.'));
-        System.out.println("Quotient " + (zahl1 / zahl2));
+        System.out.println("Quotient = " + (zahl1 / zahl2));
     }
 
     private static void Potenzen() throws IOException {
