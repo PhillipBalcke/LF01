@@ -19,10 +19,10 @@ public class Rabattaktion {
 
         System.out.println("Geben sie Ihre Anzahl an Döner an");
         text = br.readLine();
-        int anzahlDöner;
+        int anzahlDöner = Integer.parseInt(text.replace(',' , '.'));
 
 
-        double Gesamtbetrag = Pizza + Döner + versandkosten;
+        double Gesamtbetrag = (anzahlPizza * Pizza) + (anzahlDöner * Döner) + versandkosten;
         System.out.println("Der Gesamtbetrag ist: " + Gesamtbetrag + "€");
 
         if (Gesamtbetrag >= 50) {
