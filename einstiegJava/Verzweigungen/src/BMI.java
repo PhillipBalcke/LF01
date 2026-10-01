@@ -44,6 +44,8 @@ public class BMI {
         }
 
         do {
+
+
             System.out.println("Wollen Sie eine weitere Rechnung durchführen, dann geben Sie [j] ein");
             String wiederholen = br.readLine();
             if (wiederholen.equals("j") || (wiederholen.equals("J"))) {
