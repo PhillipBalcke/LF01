@@ -25,7 +25,26 @@ public class IO {
 
 
         }
-
-
     }
+
+
+    public static double readDouble() throws IOException {
+
+        while (true) {
+            try {
+                String eingabe = readString();
+                int kommazahl = Integer.parseInt(eingabe.replace(',', '.'));
+                return kommazahl;
+            }   catch (NumberFormatException | IOException e) {
+                System.out.println("Kommazahl! Bitte erneut versuchen");
+            }
+            }
+    }
+
+
+
+
+
+
+
 }
