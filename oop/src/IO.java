@@ -17,26 +17,23 @@ public class IO {
         while (true) {
             try {
                 String eingabe = readString();
-                int ganzzahl = Integer.parseInt(eingabe.replace(',', '.'));
+                int ganzzahl = Integer.parseInt(eingabe);
                 return ganzzahl;
             }   catch (NumberFormatException | IOException e) {
                 System.out.println("Keine Ganzzahl! Bitte erneut versuchen");
             }
-
-
         }
     }
-
 
     public static double readDouble() throws IOException {
 
         while (true) {
             try {
                 String eingabe = readString();
-                int kommazahl = Integer.parseInt(eingabe.replace(',', '.'));
+                double kommazahl = Double.parseDouble(eingabe.replace(',', '.'));
                 return kommazahl;
             }   catch (NumberFormatException | IOException e) {
-                System.out.println("Kommazahl! Bitte erneut versuchen");
+                System.out.println("keine Kommazahl! Bitte erneut versuchen");
             }
             }
     }
