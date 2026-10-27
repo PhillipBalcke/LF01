@@ -18,8 +18,8 @@ public class Fakultaet {
             for (int i = 1; i <= zahl; i++) ;
             {
                 double Fakulteat = 1;
-                long i =
-                Fakultaet = Fakultaet * //i;
+                long i = Fakultaet;
+                Fakultaet = Fakultaet * i;
 
                 System.out.println("Die Fakultät von " + i+  "=" + Fakultaet);
 
