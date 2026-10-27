@@ -7,19 +7,32 @@ public class Quadratsummen {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String text = br.readLine();
+
 
         System.out.println("Bis zur welcher ganzen Zahl soll die Quadratsumme berechnet werden? ");
-        text = br.readLine();
+        String text = br.readLine();
         double zahl = Double.parseDouble(text.replace(',', '.'));
 
+        double x = 1;
+        double y = 0;
+        double z = 0;
+
         for (int n = 1; n <= zahl; n++) {
-            if (zahl >= 0) {
-                double Quadratsumme =
-                System.out.println("Quadratsumme von " + zahl + " = " +);
+
+            y = x * x;
+            z = z + y;
+
+
+
+
+
+                x = x+1;
 
             }
-        }
+            System.out.println("Quadratsumme von " + zahl + " = " + z);
+
     }
 
-}
+    }
+
+
