@@ -13,20 +13,15 @@ public class GeometrischeReihe {
         String text = br.readLine();
         int n = Integer.parseInt(text.replace(',' , '.'));
 
-       double x;
-       double y = 2;
-       double zahl = 0;
+      double ergebniss = 0;
 
-       for( int i = 0; i < n; i++ ) {
+       for( int i = 1; i <= n; i++ ) {
 
-
-           x = 1 / y;
-           zahl = zahl + x;
-
-           y = y * 2;
-
+           ergebniss = ergebniss + 1/Math.pow(2,i);
        }
-        System.out.println("Das Ergebniss lautet: " + zahl);
+
+
+        System.out.println("Das Ergebniss lautet: " + ergebniss);
 
 
     }
