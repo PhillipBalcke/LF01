@@ -10,8 +10,7 @@ public class GeometrischeReihe {
 
 
         System.out.println("Wie viele Durchgänge möchten Sie berechnen");
-        String text = br.readLine();
-        int n = Integer.parseInt(text.replace(',' , '.'));
+        int n = Integer.parseInt(br.readLine());
 
       double ergebniss = 0;
 
