@@ -1,0 +1,108 @@
+package de.phillip.europa.services;
+
+import java.math.BigDecimal;
+
+/**
+ * Die Klasse stellt einen Service zur Preisberechnung von Sofas zur Verfügung
+ * 
+ * @author P.Balcke - Oktober 2026
+ */
+public class PreisService {
+
+    /**
+     * Parameterloser Konstruktor.
+     */
+    public PreisService() {
+        // NIX
+    }
+
+
+    /**
+     * Die Methode berechnet denn Preis eines Sofas mit der übergebenen Anzahl an Sitzpositionen.
+     * @param anzahlSitze Anzahl der Sitze des Sofas.
+     * @return Preis in Euro
+     */
+    public BigDecimal preisberechnungSofa(final double anzahlSitze) {
+
+        if(anzahlSitze < 1){
+
+            return new BigDecimal(0);
+
+        } else if (anzahlSitze == 1) {
+
+           return new BigDecimal(800);
+            
+        } else if (anzahlSitze <= 2){
+
+            return new BigDecimal(1300);
+
+        } else if (anzahlSitze <= 3){
+
+            return new BigDecimal(1900);
+
+        } else {
+
+            return new BigDecimal(2500);
+
+        }
+            
+    } // preisberechnungSofas()
+
+
+    /**
+     * Die Methode berechnet denn Preis eines Sidesboards über denn Sideboard Typ.
+     * Es sind nur drei Typen zulässig Schmal, normal und breit.
+     * @param typeOfSideboard Es sind nur drei Typen zulässig Schmal, normal und breit.
+     * @return Preis in Euro
+     */
+    public BigDecimal preisberechnungSideboard(final int typeOfSideboard) {
+
+        switch (typeOfSideboard){
+            case 0: //Schmales Sideobard 
+                return new BigDecimal(69);
+            case 1: //Normales Sideboard
+                return new BigDecimal(89);
+            case 2: //Breites Sideboard
+                return new BigDecimal(109);
+            default: 
+            throw new IllegalArgumentException("Ungültige Eingabe Typ des Sideboards: " + typeOfSideboard);
+        }
+    
+    } // preisberechnungSideboard()
+
+
+
+
+    /**
+     * Die Methode berechnet denn Preis eines Schranks auf Basis der Breite des Schranks
+     * @param breiteInMetern Die Breite des Schranks in Metern.
+     * 
+     * @return Preis in Euro
+     */
+    public BigDecimal preisberechnungSchrank(final double breiteInMetern) {
+
+        if (breiteInMetern <= 0.9) {
+
+           return new BigDecimal(209);
+            
+        } else if (breiteInMetern <= 1.2){
+
+            return new BigDecimal(249);
+
+        } else if (breiteInMetern <= 1.5){
+
+            return new BigDecimal(299);
+
+        } else if (breiteInMetern > 1.5){
+
+            return new BigDecimal(499);
+
+        } // if
+            
+        return new BigDecimal(0);
+
+    } // preisberechnungSchrank()
+
+
+    
+} // class PreisService()
