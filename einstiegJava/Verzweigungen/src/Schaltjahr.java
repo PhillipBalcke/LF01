@@ -2,7 +2,7 @@ import java.io.IOException;
 
 public class Schaltjahr {
     public static void main(String[] args) throws IOException {
-        boolean weiter = false;
+
 
         do {
             System.out.println("Bei welchem Jahr soll Ihre Berechnung starten?");
@@ -25,14 +25,9 @@ public class Schaltjahr {
 
             System.out.println("Wollen Sie eine weiter Rechnung durchfrühren dann geben Sie [j] ein");
             String wiederholen = IO.readString();
-            if (wiederholen.equals("j") || wiederholen.equals("J")) {
-                weiter = true;
-            } else {
-                weiter = false;
-            }
+            if (wiederholen.equals("j") || wiederholen.equals("J"));
 
-
-        } while (weiter);
+        } while (IO.readBoolean());
 
     }
 }
