@@ -8,7 +8,7 @@ public class IO {
 
 
     public static String readString() throws IOException {
-        String text = readString();
+        String text = br.readLine();
         return text;
     }
 
