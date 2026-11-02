@@ -4,7 +4,7 @@ public class Quadrat {
     public static void main(String[] args) throws IOException {
 
         System.out.println("Wie groß soll das Quadrat sein?");
-        int zahl = IO2.readIngeger();
+        int zahl = IO.readInteger();
 
         for( int i =0; i < zahl; i++) {
 
