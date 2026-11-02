@@ -24,8 +24,6 @@ public class Schaltjahr {
 
 
             System.out.println("Wollen Sie eine weiter Rechnung durchfrühren dann geben Sie [j] ein");
-            String wiederholen = IO.readString();
-            if (wiederholen.equals("j") || wiederholen.equals("J"));
 
         } while (IO.readBoolean());
 
