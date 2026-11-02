@@ -9,7 +9,7 @@ public class TestIO {
         System.out.println("Sie sind " + alter + " " + "Jahre alt");
 
         System.out.println("Geben das aktuelle jahr an");
-        int jahr = IO.readIngeger();
+        int jahr = IO.readInteger();
 
         System.out.println("Das aktuelle Jahr ist " + jahr);
 

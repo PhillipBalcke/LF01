@@ -12,7 +12,7 @@ public class IO {
         return text;
     }
 
-    public static int readIngeger() throws IOException {
+    public static int readInteger() throws IOException {
 
         while (true) {
             try {
