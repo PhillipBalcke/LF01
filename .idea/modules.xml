@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/LF01.iml" filepath="$PROJECT_DIR$/.idea/LF01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/einstiegJava/PQ_Formel/PQ_Formel.iml" filepath="$PROJECT_DIR$/einstiegJava/PQ_Formel/PQ_Formel.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hello World/Rechnen1/Rechnen1.iml" filepath="$PROJECT_DIR$/Hello World/Rechnen1/Rechnen1.iml" />
       <module fileurl="file://$PROJECT_DIR$/TaschenRechner/TaschenRechner.iml" filepath="$PROJECT_DIR$/TaschenRechner/TaschenRechner.iml" />
       <module fileurl="file://$PROJECT_DIR$/einstiegJava/Verzweigungen/Testaufgaben.iml" filepath="$PROJECT_DIR$/einstiegJava/Verzweigungen/Testaufgaben.iml" />
