@@ -1,33 +1,35 @@
 import java.io.IOException;
 
-public class pi {
-    public static void main(String[] args) throws IOException {
+public class KreiszahlPI {
+    
+    /**
+     * Berechnet die Annäherung der Kreiszahl PI.
+     * 
+     * @param args Keine Argumente
+     * @throws IOException Fehler beim Lesen der Eingabewerte.
+     */
+     public static void main(String[] args) throws IOException {
 
-        System.out.println("Geben sie eine Zahl ein:");
-        double zahl = IO.readDouble();
+        System.out.println("Geben Sie bitte die Anzahl der Durchläufe (n) ein ein: ");
+        final int anzahlDurchlaeufe = IO.readInteger();
 
-        double summe =0;
-        double term;
-        for (int n = 0; n <= zahl; n++) {
+        double summe = 0;
+        for (int n = 0; n <= anzahlDurchlaeufe; n++) {
 
-        term = Math.pow(-1,n) / (2 * n + 1);
+            double term = Math.pow(-1, n) / (2 * n + 1);
 
-        summe += term;
-        }
+            summe += term;
 
-        double ergebniss = 4 * summe;
-        double abweichung = (Math.PI - ergebniss);
+        } // for n
 
-        System.out.println("Das Ergebnis lautet: " + ergebniss);
-        System.out.println("Echtes Pi (Math.PI): " + Math.PI);
-        System.out.println("Abweichung:: " + abweichung);
+        double pi = 4 * summe;
 
+        System.out.println("Näherung von PI = " + pi);
 
+        double abweichungPI = Math.abs(pi - Math.PI);
 
-    }
-}
+        System.out.println("Abweichung von PI = " + abweichungPI);
 
-
-
-
-
+    } // main()
+    
+} // class KreiszahlPI
