@@ -18,14 +18,14 @@ public class PQ_FormelXXL {
                 System.out.println("Es gibt keine Lösung");
             } else if (d == 0) {
 
-                double x1 = ((b * -1));
+                double x1 = -b / (2 * a);
                 System.out.println("DIe Lösung ist: " + x1);
             } else  {
 
-                double x1 = (b * -1) + Math.sqrt(Math.pow(b,2) - 4 * a * c) / (2 * a);
-                double x2 = (b * -1) - Math.sqrt(Math.pow(b,2) - 4 * a * c) / (2 * a);
+                double x1 = (-b + Math.sqrt(d)) / (2 * a);
+                double x2 = (-b - Math.sqrt(d)) / (2 * a);
 
-                System.out.println("Lösung X1 = " + x2);
+                System.out.println("Lösung X1 = " + x1);
                 System.out.println("Lösung X2 = " + x2);
 
             }
