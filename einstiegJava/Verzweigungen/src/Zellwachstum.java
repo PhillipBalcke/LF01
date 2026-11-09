@@ -21,7 +21,7 @@ public class Zellwachstum {
         System.out.println("Tage:       Zellmenge: ");
 
         for (int i = 0; i <= laufzeit; ++i) {
-            double ergebniss = zellmenge * Math.pow(wachstumsfaktor,i);
+            double ergebniss = Math.round(zellmenge * Math.pow(wachstumsfaktor,i) * 100) / 100.;
 
             System.out.print(i + "\t\t\t");
             System.out.println(ergebniss);
