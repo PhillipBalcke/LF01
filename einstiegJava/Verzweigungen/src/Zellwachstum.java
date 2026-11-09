@@ -4,7 +4,7 @@ public class Zellwachstum {
     public static void main(String[] args) throws IOException {
         do {
             forschleife();
-
+            System.out.println("");
             System.out.println("Wollen Sie eine weiter Rechnung durchführen dann geben Sie [j] ein");
         } while (IO.readBoolean());
 
@@ -17,7 +17,7 @@ public class Zellwachstum {
         int wachstumsfaktor = IO.readInteger();//(text.replace('.', ','));
         System.out.print("Bitte die Laufzeit der Hochrechnung in Tagen eingeben: ");
         int laufzeit = IO.readInteger();
-
+        System.out.println("");
         System.out.println("Tage:       Zellmenge: ");
 
         for (int i = 0; i <= laufzeit; ++i) {
