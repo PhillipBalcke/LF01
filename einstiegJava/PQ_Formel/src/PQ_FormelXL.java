@@ -30,6 +30,7 @@ public class PQ_FormelXL {
 
                 System.out.println("Lösung X1 = " + x1);
                 System.out.println("Lösung X2 = " + x2);
+
             }
 
 
