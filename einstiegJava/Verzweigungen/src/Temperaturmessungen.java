@@ -2,10 +2,10 @@ import java.io.IOException;
 
 public class Temperaturmessungen {
     public static void main(String[] args) throws IOException {
-
-        int tagesanzahl = eingaben();
-        berechnungausgaben(tagesanzahl);
-
+        do {
+            int tagesanzahl = eingaben();
+            berechnungausgaben(tagesanzahl);
+        } while (IO.readBoolean());
     }
 
 
@@ -21,7 +21,7 @@ public class Temperaturmessungen {
         for (int i = 1; i <= anzahltage; i++) {
             System.out.println("Bitte geben Sie die Temperatur an Tag " + i + "\t" + "an");
             double tagestemperatur = IO.readDouble();
-            if (1 == 1) {
+            if (i == 1) {
                 maxtemperatur = tagestemperatur;
             } else {
                 maxtemperatur = Math.max(maxtemperatur, tagestemperatur);
