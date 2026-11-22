@@ -35,7 +35,7 @@ public class TemperaturMessungMitListe {
 
 
         /* Berechne Mittelwert und die maximale Temperatur. */
-        Double maxTemperatur = -200.00;
+        Double maxTemperatur = -1000.00; // diese Temperatur kann nicht existieren.
         Double summeDerTemperaturen = 0.00;
         for(final Double temperatur : listOfTemperaturen){
 
