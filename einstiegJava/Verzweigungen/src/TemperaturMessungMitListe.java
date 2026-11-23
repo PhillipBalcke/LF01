@@ -64,13 +64,20 @@ public class TemperaturMessungMitListe {
 
             double spannweite = maxTemperatur - minTemperatur;//Spanweite
 
-            for (final double maximaleDifferenz: listOfTemperaturen) {
 
+            double maxDifferenz = 0.0;
+
+            for (int i = 1; i < listOfTemperaturen.size(); i++) {
+                double vorherigeTemperatur = listOfTemperaturen.get(i - 1);
+                double aktuelleTemperatur = listOfTemperaturen.get(i);
+                double sprung = Math.abs(aktuelleTemperatur - vorherigeTemperatur);
+
+                if (sprung > maxDifferenz) {
+                    maxDifferenz = sprung;
+                }
             }
 
-
-
-
+            System.out.println("Größter Sprung (maxDifferenz): " + maxDifferenz);
 
 
 
@@ -79,7 +86,7 @@ public class TemperaturMessungMitListe {
             System.out.printf("Die Maximale Temperatur betrug: %.2f Grad.%n", maxTemperatur);
             System.out.printf("Die Minimale Temperatur betrug: %.2f Grad.%n", minTemperatur);
             System.out.printf("Die Spannweite beträgt: %.2f %n", spannweite);
-
+            System.out.printf("Die Maximale Differenz beträgt: %.2f %n",maxDifferenz);
 
             System.out.println("Wollen Sie eine weiter Berechnung durchführen dann geben sie [j] ein");
         }while (IO.readBoolean());
