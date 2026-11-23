@@ -77,8 +77,6 @@ public class TemperaturMessungMitListe {
                 }
             }
 
-            System.out.println("Größter Sprung (maxDifferenz): " + maxDifferenz);
-
 
 
             /* Ausgabe der berechneten Werte. */
