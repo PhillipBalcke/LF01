@@ -40,6 +40,9 @@ public class Verdoppeln {
 
             System.out.println("Ursprüngliches Array: " + listOfWerten);
             System.out.println("Verdoppeltes Array: " + verdoppelteWerte);
+
+
+            System.out.println("Wollen Sie eine weiter Berechnung durchführen dann geben sie [j] ein");
         } while (IO.readBoolean());
     }
 }
