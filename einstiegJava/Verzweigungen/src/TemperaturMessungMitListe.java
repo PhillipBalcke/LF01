@@ -20,7 +20,7 @@ public class TemperaturMessungMitListe {
                 tag++;
                 System.out.printf("%nBitte geben Sie die Temperatur an Tag %d ein: ", tag);
 
-                Double temperatur = IO.readDouble();
+                double temperatur = IO.readDouble();
 
                 if (temperatur <= -100) {
                     break;
@@ -53,7 +53,7 @@ public class TemperaturMessungMitListe {
 
             final Double mittelwertTemperatur = summeDerTemperaturen / listOfTemperaturen.size();
 
-            Double minTemperatur = 1000.00;//Mindest Temperatur
+            double minTemperatur = 1000.00;//Mindest Temperatur
             for (final double temperatur : listOfTemperaturen) {
 
                 if (temperatur < minTemperatur) {
