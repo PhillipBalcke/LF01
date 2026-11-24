@@ -11,8 +11,9 @@ public class Maxima {
             System.out.print("Wie viele Werte? ");
             double werte = IO.readDouble();
 
-            final List<Double> ListOfWerten = new ArrayList<Double>();
+            final List<Double> listOfWerten = new ArrayList<>();
 
+            /* Eingaben des Anwenders. */
             double wert = 0;
             while (true) {
                 wert++;
@@ -21,31 +22,54 @@ public class Maxima {
                 if (eingabe <= -100) {
                     break;
                 }
-                ListOfWerten.add(eingabe);
-            }
+                listOfWerten.add(eingabe);
 
-            if (ListOfWerten.isEmpty());
-            System.out.println("Abbruch - Sie haben keine Werte erfasst.");
-            return;
+            } // while
 
-            double maxWert = -1000.00;
-            for(final double eingabe : ListOfWerten) {
-                if (wert > maxWert) {
-                    maxWert = wert;
+            if (listOfWerten.isEmpty()) {
+                System.out.println("ABBRUCH - Sie haben keine Werte erfasst.");
+                return;
+            } // if
+            else {
+
+                Double maxTemperatur = -1000.00;
+                for (final Double temperatur : listOfWerten) {
+
+                    if (temperatur > maxTemperatur) {
+                        maxTemperatur = temperatur;
+                    }
+
                 }
+                Double maxwert = null;
+                for (double zahl : zahlen) {
+                    if (maxwert == null || zahl > maxwert) {
+                        maxwert = maxwert;
+                        maxwert = zahl;
+                    } else if (zahl != maxwert && (maxwert == null || zahl > maxwert)) {
+                        maxwert = zahl;
+                    }
+                }
+
+                if (maxwert != null) {
+                    System.out.println("Zweitgrößter Wert: " + maxwert);
+                } else {
+                    System.out.println("Kein eindeutiger zweitgrößter Wert vorhanden.");
+                }
+
+
+
+
+
+
+                System.out.printf("Die Maximale Temperatur betrug: %.2f Grad.%n", maxwert);
+                System.out.println("Wollen Sie eine weiter Berechnung durchführen dann geben sie [j] ein");
             }
 
-            System.out.println("Die größte Zahl ist" + maxWert);
-
-
-
-
-
-
-
-
-
-        }while (IO.readBoolean());
+        }while (IO.readBoolean()) ;
 
     }
+
 }
+
+
+
