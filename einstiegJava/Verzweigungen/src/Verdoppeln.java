@@ -31,7 +31,6 @@ public class Verdoppeln {
                 System.out.println("ABBRUCH - Sie haben keine Werte erfasst.");
                 return;
             } // if
-            System.out.println("Ursprüngliches Array" + listOfWerten);
 
             List<Double> verdoppelteWerte = new ArrayList<>();
             for (double zahl : listOfWerten) {
