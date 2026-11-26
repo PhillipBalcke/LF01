@@ -5,43 +5,29 @@ import java.util.List;
 public class Balkendiagramm {
     public static void main(String[] args) throws IOException {
 
-       do {
-           System.out.println("----------------------------------");
-           System.out.println("Geben Sie bitte -100 ein, wenn Sie mit der Erfassung der Werte fertig sind.");
-           System.out.println("Wie viele Kandidaten sind noch im Rennen? ");
-           int kandidaten = IO.readInteger();
-           System.out.println("Erfassen Sie jetzt die prozentuale Verteilung des Votings: ");
+        do {
+            System.out.println("----------------------------------");
+            System.out.print("Wie viele Kandidaten sind noch im Rennen? ");
+            int wert = IO.readInteger();
+            double[] werte = new double[wert];
+            System.out.println("Erfassen Sie jetzt die prozentuale Verteilung des Votings: ");
 
-           final List<Integer> listOfGanzZahlen = new ArrayList<>();
-           int wert = 0;
 
-           while (true) {
-               wert++;
-               System.out.printf("%nKandidat" + "\t" + wert + ":");
-               int eingabe = IO.readInteger();
-               if (eingabe <= -100) {
-                   break;
-               }
-               listOfGanzZahlen.add(eingabe);
-           } // while
+            for (int i = 0; i < werte.length; i++) {
+                System.out.println("Kandidat " + (i + 1) + ":");
+                werte[i] = IO.readDouble();
+            }
 
-           if (listOfGanzZahlen.isEmpty()) {
-               System.out.println("Abbruch - Sie haben keine Werte erfasst.");
-               return;
-           } else {
-               System.out.println("Ergebnis:");
-               for ( int i = 0; i < wert; i++) {
+            System.out.println("Ergebnis");
+            for (int i = 0; i < werte.length; i++) {
+                System.out.print("Kandidat " + (i + 1) + ":");
+                for (int j = 0; j < werte[i]; j++) {
+                    System.out.print("*");
+                }
+                System.out.println(" " + werte[i] + "%");
+            }
 
-                   System.out.print("Kandidat" +"\t"+ (i+1)+":");
-                   for( int j = 0; j < wert ; j++) {
-                       System.out.print("*");
-
-                   }
-                   System.out.println(" "+ listOfGanzZahlen.get(i) + "%");
-
-               }
-           }
-           System.out.println("Wollen Sie eine weiter Berechnung durchführen dann geben sie [j] ein");
-       }while (IO.readBoolean());
-       }
+            System.out.println("Wollen Sie eine weiter Berechnung durchführen dann geben sie [j] ein");
+        } while (IO.readBoolean());
+    }
 }
