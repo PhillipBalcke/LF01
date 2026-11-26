@@ -32,43 +32,44 @@ public class Maxima {
             } // if
             else {
 
-                Double maxTemperatur = -1000.00;
+                Double maxWert = -1000.00;
                 for (final Double temperatur : listOfWerten) {
 
-                    if (temperatur > maxTemperatur) {
-                        maxTemperatur = temperatur;
+                    if (temperatur > maxWert) {
+                        maxWert = temperatur;
                     }
 
                 }
                 Double maxwert = null;
-                for (double zahl : zahlen) {
+                Double zweitGroesster = null;
+
+                for (double zahl : listOfWerten) {
                     if (maxwert == null || zahl > maxwert) {
-                        maxwert = maxwert;
+                        zweitGroesster = maxwert;
                         maxwert = zahl;
-                    } else if (zahl != maxwert && (maxwert == null || zahl > maxwert)) {
-                        maxwert = zahl;
+                    } else if (zahl != maxwert && (zweitGroesster == null || zahl > zweitGroesster)) {
+                        zweitGroesster = zahl;
                     }
+
                 }
+                    if (zweitGroesster != null) {
+                        System.out.println("Zweitgrößter Wert: " + zweitGroesster);
+                    } else {
+                        System.out.println("Kein zweitgrößter Wert vorhanden.");
 
-                if (maxwert != null) {
-                    System.out.println("Zweitgrößter Wert: " + maxwert);
-                } else {
-                    System.out.println("Kein eindeutiger zweitgrößter Wert vorhanden.");
-                }
-
-
+                    }
 
 
+                    System.out.printf("Größter Wert: %.2f Grad.%n", maxwert);
+                    System.out.println("Wollen Sie eine weiter Berechnung durchführen dann geben sie [j] ein");
 
 
-                System.out.printf("Die Maximale Temperatur betrug: %.2f Grad.%n", maxwert);
-                System.out.println("Wollen Sie eine weiter Berechnung durchführen dann geben sie [j] ein");
             }
 
-        }while (IO.readBoolean()) ;
+
+        } while (IO.readBoolean()) ;
 
     }
-
 }
 
 
